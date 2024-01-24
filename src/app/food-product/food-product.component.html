@@ -1,0 +1,43 @@
+<p>{{posts|json}}</p>
+<div class="container">
+    <div class="row">
+        <p class="fs-2 text-center fw-bold bg-danger">Order Now</p>
+    </div>
+    <div class="row">
+        <table class="table table-dark table-striped text-danger">
+            <thead>
+                <tr class="fw-bolder fs-4 text-uppercase">
+                    <th class="text-danger "> Id</th>
+                    <th> Item </th>
+                    <th> Price</th>
+                    <th> Quantity</th>
+                    <th class="text-danger "> Add cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of posts" >
+                    <td class="fs-4 text-capitalize text-warning fw-bold ">{{i.itemId}}</td>
+                    <td class="fs-4 text-capitalize text-warning fw-bold ">{{i.itemName}}</td>
+                    <td class="fs-4 text-capitalize text-warning fw-bold ">{{i.itemPrice}}</td>
+                    <td><input type="number" name="qty" id=i.id [(ngModel)]="qty" class="form"/></td>
+                    <td><button class="btn btn-danger px-3 " type="submit" (click)="onAddToCart(i.itemId,i.itemPrice)">Add to Cart</button></td>
+                </tr>   
+            </tbody>
+        </table>
+        <p>{{user|json}}</p>
+    </div>
+
+    <div class="container bg-warning p-3">
+        <form>
+            <label>Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="user.name" class="form-control"/><br><br>
+            <label>Contact No:</label>
+            <input type="number" id="phone" name="phone" [(ngModel)]="user.contactNo" class="form-control"/><br><br>
+            <label>Gender:</label>
+            <input type="text" id="phone" name="phone" [(ngModel)]="user.gender" class="form-control"/><br><br>
+            <label>Email ID:</label>
+            <input type="email" id="phone" name="phone" [(ngModel)]="user.emailId" class="form-control"/><br><br>
+        </form>
+    </div><br>
+<button type="submit" (click)="placeOrder()">Place Order</button>
+</div>

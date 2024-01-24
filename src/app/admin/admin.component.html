@@ -1,0 +1,52 @@
+<!-- <p>{{posts|json}}</p> -->
+<p>{{post3|json}}</p>
+
+<div class="container">
+    <p class="fs-1 text-uppercase fw-bold text-center text-primary bg-warning p">All Item</p>
+        <table class="table table-dark mt-5">
+            <thead>
+                <tr class="text-uppercase">
+                    <th class="text-secondary fs-2"> Id</th>
+                    <th class="text-secondary fs-2"> Item Name</th>
+                    <th class="text-secondary fs-2"> Item Price</th>
+                    <th class="text-secondary fs-2"> update</th>
+                    <th class="text-secondary fs-2"> Delete</th>
+                </tr> 
+            </thead>
+            <tbody class="">
+                <tr *ngFor="let i of posts">
+                    <td class="text-danger fs-4">{{i.itemId}}</td>
+                    <td><input class="form-control text-danger fs-4 bg-dark border-custom" id="disabledInput" type="text" placeholder="Item Name..." [(ngModel)]="i.itemName"></td>
+                    <td><input class="form-control text-danger fs-4 bg-dark border-custom" id="disabledInput" type="text" placeholder="Item Price..." [(ngModel)]="i.itemPrice"></td>
+                    <!-- <td><input type="number" [(ngModel)]="i.price"/></td> -->
+                    <td><button class="btn btn-warning btn-lg" type="submit" (click)="update(i.itemId,i.itemName,i.itemPrice)">update</button></td>
+                    <td><button class="btn btn-danger btn-lg" type="submit" (click)="delete(i.itemId)">Delete</button></td>
+                </tr>  
+            </tbody>
+        </table>
+</div>
+
+<!-- Designing for creating Item -->
+<div class="container py-5">
+    <p class="fs-1 text-uppercase fw-bold text-center text-primary bg-warning p">Add Item</p>
+        <table class="table table-dark mt-5">
+            <thead>
+                <tr class="text-uppercase">
+                    <th class="text-secondary fs-2"> Id</th>
+                    <th class="text-secondary fs-2"> Item Name</th>
+                    <th class="text-secondary fs-2"> Item Price</th>
+                    <th class="text-secondary fs-2"> Add item</th>
+                    <!-- <th class="text-secondary fs-2"> Delete</th> -->
+                </tr> 
+            </thead>
+            <tbody class="">
+                <tr>
+                    <td><input class="form-control text-danger fs-4 bg-dark border-custom" id="disabledInput" type="number" placeholder="Item Name..." [(ngModel)]="modelItem.itemId"/></td>
+                    <td><input class="form-control text-danger fs-4 bg-dark border-custom" id="disabledInput" type="text" placeholder="Item price..." [(ngModel)]="modelItem.itemName"/></td>
+                    <td><input class="form-control text-danger fs-4 bg-dark border-custom" id="disabledInput" type="number" placeholder="Item Name..." [(ngModel)]="modelItem.itemPrice"/></td>
+                    <!-- <td><input type="number" [(ngModel)]="model2.price"/></td> -->
+                    <td><button class="btn btn-danger px-5" type="submit" (click)="create()">Add</button></td>
+                </tr>
+            </tbody>
+        </table>
+</div>

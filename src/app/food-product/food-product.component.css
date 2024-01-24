@@ -1,0 +1,17 @@
+.form{
+    width:140px;
+    height:32px;
+    border: none;
+    outline:none;
+    background-color: #ccc;
+    margin: auto;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: red;
+}
+
+.form:hover{
+    outline: 3px solid red;
+    background-color: #fff;
+}

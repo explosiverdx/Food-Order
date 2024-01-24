@@ -1,0 +1,138 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning fs-1" href="#">Foo_Noody</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold text-uppercase ">
+        <li class="nav-item">
+          <a class="nav-link active text-warning" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container my-5 margin">
+  <div class="row">
+      <div class="col">
+          <div class="row ">
+            <div class="col-12 col-lg-8 ps-5 text-md-center">
+              <p class="fs-2 text-uppercase">Online Food</p>
+              <p class="fs-1 fw-bold">TASTE</p>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered <br>alteration in some form, by injected humour, or randomised words which don't look even slightly <br>believable. If you are going to use a passage of Lorem Ipsum, you need to be sure </p>    
+            </div>
+          </div>
+          <div class="row pt-3">
+            <div class="col-12 col-lg-4 text-end">
+              <button class="btn btn-white text-uppercase fw-bold border-dark">Contact us</button> 
+            </div>
+            <div class="col">
+              <button  class="btn btn-warning text-uppercase fw-bold ">get a quote now</button> 
+            </div>
+          </div>
+          <div class="row  mt-2 d-flex text-center p-3">
+            <div class="col-auto round-circle bg-dark size-custom"></div>
+            <div class="col-auto round-circle bg-warning size-custom-2"></div>
+          </div>
+      </div>
+      <div class="col w-50 text-start">
+          <img src="assets/images/food.jpg" alt=""/>
+      </div>
+  </div>
+</div>
+
+
+<div class="container-fluid margin">
+  <div class="row text-center fs-1 fw-bold text-uppercase">
+    <p>Login Here</p>
+  </div>
+  <div class="row col-6 col-lg-4 m-auto">
+    <div class="mb-3 text-center ">
+      <input type="email" class="form-control text-center fs-4 form-control-sm" id="exampleFormControlInput2" placeholder="Email" [(ngModel)]="model.email">
+    </div>
+    <div class="mb-3 text-center ">
+      <input type="password" class="form-control text-center fs-4 form-control-sm" id="exampleFormControlInput3" placeholder="Password" [(ngModel)]="model.password">
+    </div>
+    <div class="col-3 mx-"><button type="submit" class="btn btn-info  fw-bold px-4 py-1 rounded-pill" (click)="userLogin()">Login</button></div>
+    <div class="col-3 mx-"><button type="submit" class="btn btn-info  fw-bold px-4 py-1 rounded-pill" (click)="userSignUp()">Signup</button></div>
+    <div class="col-3 mx-"><button type="submit" class="btn btn-info  fw-bold px-4 py-1 rounded-pill" (click)="adminLogin()"> A_Login</button></div>
+    <div class="col-3 mx-"><button type="submit" class="btn btn-info  fw-bold px-4 py-1 rounded-pill" (click)="adminSignUp()">A_Signup</button></div>
+    <!-- <div class="mb-3 text-center "><button class="btn btn-warning fs-5 fw-bold px-4 py-1 rounded-pill">Submit</button></div> -->
+  </div>
+</div>
+
+
+  <div class="container-fluid bg-warning mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="fs-3 fw-bold text-uppercase">Title Here</p>
+          <p class="fs-5 fw-bold">Lorem ipsum dolor sit amet, consectetur adipi<br>scing elit. Aliquam at dignissim nunc, id maxi<br>mus ex. Etiam nec dignissim elit, at dignissim<br> enim. </p>
+          <div class="d-flex">
+            <div class="fs-3"><i class="bi bi-facebook"></i></div>
+            <div class="px-1 fs-3"><i class="bi bi-whatsapp"></i></div>
+            <div class="px-1 fs-3"><i class="bi bi-google"></i></div>
+            <div class="fs-3"><i class="bi bi-facebook"></i></div>
+          </div>
+        </div>
+        <div class="col d-flex">
+          <div class="col">
+            <p class="fs-4 fw-bold text-uppercase mx-4">About</p>
+            <ul mx-4>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Brand Guidelines</a></li>
+              <li><a href="#">Terms & Condition</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <p class="fs-4 fw-bold text-uppercase mx-4">Service</p>
+            <ul mx-4>
+              <li><a href="#">How to Order</a></li>
+              <li><a href="#">Our Product</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Promo</a></li>
+              <li><a href="#">Payment Method</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <p class="fs-4 fw-bold text-uppercase mx-4">Other</p>
+            <ul mx-4>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="container-fluid bg-warning">
+    <p class="py-3 text-center fs-5 fw-bold">Copyright 2024 All Right Reserved By Free  html Templates</p>
+  </div>
+   
+    
+    
+    
